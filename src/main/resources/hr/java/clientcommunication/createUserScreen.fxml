@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="10" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.clientcommunication.controller.CreateUserController">
+    <fx:include source="menu.fxml" />
+    <!-- Main layout content -->
+    <GridPane prefHeight="367.0" prefWidth="1055.0">
+
+        <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="firstNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Surname:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="lastNameField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label text="Birth Date:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <DatePicker fx:id="birthDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <Label text="Username:" GridPane.rowIndex="4" />
+        <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+        <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+
+        <Label text="Reapeat Password:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+
+        <Button fx:id="saveButton" onAction="#onSave" text="Save" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+      <PasswordField fx:id="passwordTextField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <PasswordField fx:id="repeatPasswordTextField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <Label text="New User">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="roleComboBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <Label text="Role" GridPane.rowIndex="5" />
+        <columnConstraints>
+            <ColumnConstraints maxWidth="312.6666666666667" minWidth="300.0" prefWidth="300.0" />
+            <ColumnConstraints maxWidth="300.0" minWidth="0.0" prefWidth="300.0" />
+        </columnConstraints>
+        <rowConstraints>
+         <RowConstraints minHeight="10.0" prefHeight="40.0" />
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints maxHeight="37.333333333333314" minHeight="24.000020345052064" prefHeight="40.0" />
+            <RowConstraints maxHeight="18.666646321614564" minHeight="5.333333333333314" prefHeight="40.0" />
+        </rowConstraints>
+        <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+        </VBox.margin>
+    </GridPane>
+</VBox>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.GridPane?>
+
+<MenuBar prefWidth="1065.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.clientcommunication.controller.MenuController">
+    <menus>
+        <Menu mnemonicParsing="false" text="Settings">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#showUserSettingsScreen" text="User Settings" />
+            </items>
+        </Menu>
+
+        <Menu fx:id="usersMenu" mnemonicParsing="false" text="Users">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#showSearchUsersScreen" text="Search" />
+                <MenuItem mnemonicParsing="false" onAction="#showCreateUsersScreen" text="New" />
+            </items>
+        </Menu>
+
+        <Menu mnemonicParsing="false" text="Clients">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#showSearchClientsScreen" text="Search" />
+                <MenuItem mnemonicParsing="false" onAction="#showCreateClientsScreen" text="New" />
+            </items>
+        </Menu>
+
+        <Menu mnemonicParsing="false" text="Communication Logs">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#showSearchCommunicationLogsScreen" text="Search" />
+                <MenuItem mnemonicParsing="false" onAction="#showCreateCommunicationLogsScreen" text="New" />
+            </items>
+        </Menu>
+
+        <Menu mnemonicParsing="false" text="Reporting">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#showReportScreen" text="Changes" />
+            </items>
+        </Menu>
+
+        <Menu fx:id="changesMenu" mnemonicParsing="false" text="Changes">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#showChangesScreen" text="Changes" />
+            </items>
+        </Menu>
+
+        <Menu mnemonicParsing="false" text="Options">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#logout" text="Log out" />
+            </items>
+        </Menu>
+
+    </menus>
+</MenuBar>

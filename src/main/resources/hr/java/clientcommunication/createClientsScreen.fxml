@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="10" xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="hr.java.clientcommunication.controller.CreateClientsController">
+
+    <!-- Menu at the very top -->
+    <fx:include source="menu.fxml" />
+
+    <!-- Main layout content -->
+    <GridPane prefHeight="367.0" prefWidth="1055.0">
+
+        <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="firstNameField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Surname:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="lastNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Birth Date:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <DatePicker fx:id="birthDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+        <Label text="Telefone:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <TextField fx:id="phoneField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+        <Label text="Street:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+        <TextField fx:id="streetField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+        <Label text="House number:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+        <TextField fx:id="houseNumberField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+        <Label text="City:" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+        <TextField fx:id="cityField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+        <Label text="Postal code:" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+        <TextField fx:id="postalCodeField" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+
+        <Label text="Preffered Communication:" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+        <HBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="10">
+            <CheckBox fx:id="emailAllowedCheckBox" text="Email" />
+            <CheckBox fx:id="smsAllowedCheckBox" text="SMS" />
+            <CheckBox fx:id="phoneCallAllowedCheckBox" text="Telefon" />
+        </HBox>
+
+        <Button fx:id="saveButton" onAction="#onSave" text="Save" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+        <columnConstraints>
+            <ColumnConstraints maxWidth="312.6666666666667" minWidth="300.0" prefWidth="300.0" />
+            <ColumnConstraints maxWidth="300.0" minWidth="0.0" prefWidth="300.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints maxHeight="37.333333333333314" minHeight="24.000020345052064" prefHeight="40.0" />
+            <RowConstraints maxHeight="18.666646321614564" minHeight="5.333333333333314" prefHeight="40.0" />
+        </rowConstraints>
+        <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+        </VBox.margin>
+    </GridPane>
+</VBox>

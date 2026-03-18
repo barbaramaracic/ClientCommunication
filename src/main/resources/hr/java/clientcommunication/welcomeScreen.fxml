@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="611.0" prefWidth="1065.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.clientcommunication.controller.WelcomeScreenController">
+    <fx:include source="menu.fxml" />
+   <Label layoutX="187.0" layoutY="104.0" prefHeight="115.0" prefWidth="345.0" text="Wecome to Client Communication Preferences Management Tool! " textAlignment="CENTER" wrapText="true">
+      <font>
+         <Font size="19.0" />
+      </font>
+   </Label>
+</AnchorPane>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="600" prefWidth="1065" spacing="10" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.clientcommunication.controller.SearchCommunicationLogController">
+    <fx:include source="menu.fxml" />
+    <!-- Naslov -->
+    <Label text="Communication Log Search">
+        <font>
+            <Font name="Consolas" size="24" />
+        </font>
+    </Label>
+
+    <!-- Filteri -->
+    <GridPane hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="30" />
+            <ColumnConstraints percentWidth="70" />
+        </columnConstraints>
+
+        <rowConstraints>
+            <RowConstraints minHeight="30" />
+            <RowConstraints minHeight="30" />
+         <RowConstraints minHeight="30.0" prefHeight="30.0" />
+         <RowConstraints minHeight="30.0" prefHeight="30.0" />
+         <RowConstraints minHeight="30.0" prefHeight="30.0" />
+            <RowConstraints minHeight="30" />
+            <RowConstraints minHeight="30" />
+            <RowConstraints minHeight="30" />
+            <RowConstraints minHeight="30" />
+        </rowConstraints>
+
+        <!-- Klijent -->
+        <Label text="Client:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <ComboBox fx:id="clientComboBox" prefWidth="300" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <!-- Tip kontakta -->
+        <Label text="Contact Type:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <ComboBox fx:id="contactTypeComboBox" prefWidth="300" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <!-- Note pretraga -->
+        <Label text="Note contains:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <TextArea fx:id="noteTextArea" prefRowCount="2" prefWidth="300" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+        <!-- Success checkbox -->
+        <Label text="Success only:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+        <CheckBox fx:id="successCheckBox" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+        <!-- Gumb za filtriranje -->
+        <HBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="7">
+            <Button onAction="#filterLogs" text="Search" />
+        </HBox>
+   
+       <!-- Tablica -->
+       <TableView fx:id="logTableView" prefHeight="400" prefWidth="1000" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+           <columns>
+               <TableColumn fx:id="clientColumn" prefWidth="112.00000250339508" text="Client Name" />
+               <TableColumn fx:id="typeColumn" prefWidth="85.33330535888672" text="Type" />
+               <TableColumn fx:id="dateTimeColumn" prefWidth="152.00001525878906" text="Date and Time" />
+               <TableColumn fx:id="userColumn" prefWidth="112.0" text="User" />
+               <TableColumn fx:id="successColumn" prefWidth="205.33328247070312" text="Success" />
+               <TableColumn fx:id="noteColumn" prefWidth="335.33331298828125" text="Note" />
+               <TableColumn fx:id="actionColumn" text="Actions" />
+           </columns>
+       </TableView>
+      <Label text="Date From" GridPane.rowIndex="2" />
+      <Label text="Date to:" GridPane.rowIndex="3" />
+      <DatePicker fx:id="dateFromPicker" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <DatePicker fx:id="dateToPicker" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Label text="User" GridPane.rowIndex="4" />
+      <TextField fx:id="usernameTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    </GridPane>
+
+</VBox>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" spacing="10" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.java.clientcommunication.controller.ChangesController">
+
+    <!-- Menu at the very top -->
+    <fx:include source="menu.fxml" />
+
+    <!-- Main layout content -->
+    <GridPane prefHeight="611.0" prefWidth="1065.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" prefWidth="535.0" />
+            <ColumnConstraints hgrow="SOMETIMES" prefWidth="530.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="83.0" prefHeight="154.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+
+        <children>
+
+            <TableView fx:id="changesTableView" prefHeight="273.0" prefWidth="1059.0" GridPane.columnSpan="2">
+                <columns>
+                    <TableColumn fx:id="dateTableColumn" minWidth="0.0" prefWidth="116.66665649414062" text="Timestamp" />
+                    <TableColumn fx:id="userTableColumn" prefWidth="125.33333587646484" text="User" />
+                    <TableColumn fx:id="roleTableColumn" prefWidth="135.3333282470703" text="Role" />
+                    <TableColumn fx:id="oldTableColumn" prefWidth="337.3332824707031" text="Old value" />
+                    <TableColumn fx:id="newTableColumn" minWidth="0.0" prefWidth="342.6666259765625" text="New value" />
+                </columns>
+            </TableView>
+        </children>
+    </GridPane>
+</VBox>
