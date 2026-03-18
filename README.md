@@ -1,101 +1,89 @@
-📊 Client Communication Preferences Management Tool
-📌 ## Opis projekta
+# 📊 Client Communication Preferences Management Tool
+
+## 📌 Opis projekta
 
 Client Communication Preferences Management Tool je Java aplikacija razvijena za učinkovito upravljanje preferencijama komunikacije klijenata. Sustav omogućuje praćenje načina na koji klijenti žele biti kontaktirani (email, SMS, poziv itd.), evidenciju komunikacije te analizu učinkovitosti komunikacijskih kanala.
 
-🚀 ## Glavne funkcionalnosti
+---
 
-✅ Upravljanje profilima klijenata
+## 🚀 Glavne funkcionalnosti
 
-✅ Postavljanje i izmjena komunikacijskih preferencija
+* ✅ Upravljanje profilima klijenata
+* ✅ Postavljanje i izmjena komunikacijskih preferencija
+* ✅ Evidencija komunikacije (logovi)
+* ✅ Generiranje izvještaja o učinkovitosti komunikacije
+* ✅ Autentifikacija korisnika (login sustav) – ADMIN i USER
+* ✅ Pregled povijesti promjena (audit log)
+* ✅ Višedretveno osvježavanje podataka
 
-✅ Evidencija komunikacije (logovi)
+---
 
-✅ Generiranje izvještaja o učinkovitosti komunikacije
+## 🧩 Korištene tehnologije i koncepti
 
-✅ Autentifikacija korisnika (login sustav) - ADMIN i USER
+### 🔹 Objektno-orijentirano programiranje
 
-✅ Pregled povijesti promjena (audit log)
+* Apstraktne klase
+* Sučelja (interfaces)
+* Zapečaćena sučelja (sealed interfaces)
+* Zapisi (records)
+* Builder pattern
+* Generičke klase
+* Kolekcije i lambda izrazi
 
-✅ Višedretveno osvježavanje podataka
+---
 
-🧩 Korištene tehnologije i koncepti
+### 🔹 Rad s iznimkama
 
-🔹 Objektno-orijentirano programiranje
+* Sve iznimke se logiraju pomoću **Logback** biblioteke
 
-Apstraktne klase
+---
 
-Sučelja (interfaces)
+## 📂 Rad s podacima
 
-Zapečaćena sučelja (sealed interfaces)
+### 📝 Tekstualne datoteke
 
-Zapisi (records)
+* Spremaju korisnička imena i hashirane lozinke
+* Koriste se za autentifikaciju korisnika
 
-Builder pattern
+### 💾 Binarne datoteke
 
-Generičke klase
+* Serijalizacija i deserijalizacija promjena u sustavu
+* Praćenje povijesti izmjena podataka
 
-Kolekcije i lambda izrazi
+---
 
-🔹 Rad s iznimkama
+## 🖥️ JavaFX korisničko sučelje
 
-Kreirane:
+### 🔐 Login ekran
 
-✔️ 2 označene (checked) iznimke
+* Učitava korisnike iz tekstualne datoteke
+* Podržava najmanje 2 korisničke role (npr. ADMIN, USER)
 
-✔️ 2 neoznačene (unchecked) iznimke
+---
 
-Sve iznimke se logiraju pomoću Logback biblioteke
-
-📂 Rad s podacima
-📝 Tekstualne datoteke
-
-Spremaju korisnička imena i hashirane lozinke
-
-Koriste se za autentifikaciju korisnika
-
-💾 Binarne datoteke
-
-Serijalizacija i deserijalizacija promjena u sustavu
-
-Praćenje povijesti izmjena podataka
-
-
-🖥️ JavaFX korisničko sučelje
-🔐 Login ekran
-
-Učitava korisnike iz tekstualne datoteke
-
-Podržava najmanje 2 korisničke role (npr. ADMIN, USER)
-
-📊 Upravljanje entitetima
+### 📊 Upravljanje entitetima
 
 Za svaki entitet omogućeno:
 
-pregled (TableView)
+* pregled (TableView)
+* pretraga i filtriranje (lambda izrazi)
+* dodavanje
+* uređivanje
+* brisanje (uz potvrdu)
 
-pretraga i filtriranje (lambda izrazi)
+---
 
-dodavanje
-
-uređivanje
-
-brisanje (uz potvrdu)
-
-🕓 Povijest promjena
+### 🕓 Povijest promjena
 
 Prikaz svih izmjena:
 
-stara vrijednost
+* stara vrijednost
+* nova vrijednost
+* korisnička rola
+* datum i vrijeme
 
-nova vrijednost
+---
 
-korisnička rola
+## 🔄 Niti (Threads)
 
-datum i vrijeme
-
-🔄 Niti (Threads)
-
-Implementirano:
-
-Automatsko osvježavanje podataka na UI-u
+* Automatsko osvježavanje podataka na UI-u
