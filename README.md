@@ -1,9 +1,9 @@
 📊 Client Communication Preferences Management Tool
-📌 Opis projekta
+📌 ## Opis projekta
 
 Client Communication Preferences Management Tool je Java aplikacija razvijena za učinkovito upravljanje preferencijama komunikacije klijenata. Sustav omogućuje praćenje načina na koji klijenti žele biti kontaktirani (email, SMS, poziv itd.), evidenciju komunikacije te analizu učinkovitosti komunikacijskih kanala.
 
-🚀 Glavne funkcionalnosti
+🚀 ## Glavne funkcionalnosti
 
 ✅ Upravljanje profilima klijenata
 
@@ -20,6 +20,7 @@ Client Communication Preferences Management Tool je Java aplikacija razvijena za
 ✅ Višedretveno osvježavanje podataka
 
 🧩 Korištene tehnologije i koncepti
+
 🔹 Objektno-orijentirano programiranje
 
 Apstraktne klase
